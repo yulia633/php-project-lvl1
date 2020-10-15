@@ -1,0 +1,16 @@
+{
+    "name": "hexlet/code",
+    "bin": [
+         "bin/brain-games"
+    ],
+    "description": "Brain games",
+    "type": "project",
+    "authors": [
+        {
+            "name": "yulia633,",
+            "email": "ignat633yulia@yandex.ru"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
