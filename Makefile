@@ -7,3 +7,6 @@ brain-games:
 validate:
 	composer validate
 
+lint:
+	composer run-script phpcs -- --standart=PSR12 src bin
+
