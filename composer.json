@@ -2,7 +2,7 @@
     "name": "yulia633/hexlet-project-1",
     "bin": [
          "bin/brain-games",
-         "bin/brain-games"
+         "bin/brain-even"
     ],
     "description": "Brain games",
     "type": "project",
