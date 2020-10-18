@@ -1,6 +1,7 @@
 {
     "name": "yulia633/hexlet-project-1",
     "bin": [
+         "bin/brain-games",
          "bin/brain-games"
     ],
     "description": "Brain games",
@@ -13,7 +14,10 @@
     ],
     "minimum-stability": "stable",
     "autoload": {
-        "files": ["src/Cli.php"]
+        "files": [
+            "src/Cli.php",
+            "src/Even.php"
+        ]
     },
     "scripts": {
         "phpcs": "phpcs"
