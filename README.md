@@ -4,3 +4,11 @@
 [![Github Actions Status](https://github.com/hexlet-boilerplates/php-package/workflows/PHP%20CI/badge.svg)](https://github.com/yulia633/php-project-lvl1/actions)
 
 Первый проект из четырёх, в рамках профессии PHP-программист на [Хекслет](https://ru.hexlet.io/professions/php).
+
+### Описание проекта
+Необходимо реализовать набор мини-игр, запускаемых из консоли.
+### Установка
+Для глобальной установки выполните команду composer global require yulia633/hexlet-project-1
+### Пример выполнения игры
+Запуск игры:
+[![asciicast](https://asciinema.org/a/9ksqmwOMm30I95G9e4gmqBjy4.svg)](https://asciinema.org/a/9ksqmwOMm30I95G9e4gmqBjy4)
