@@ -22,13 +22,13 @@ function getAnswer($question)
 }
 
 function getRandomNumber()
-{    
+{
     return rand(RANDOM_MIN, RANDOM_MAX);
 }
 
 function play()
 {
-    $dataAttributes = function () {       
+    $dataAttributes = function () {
         $question = getRandomNumber();
         $answer = getAnswer($question);
 
@@ -42,8 +42,8 @@ function play()
 function gameLogic($gameConditionsEven, $dataAttributes)
 {
     line("Welcome to the Brain Games! \n");
-    line($gameConditionsEven);    
-    $name = prompt("May I have your name?");    
+    line($gameConditionsEven);
+    $name = prompt("May I have your name?");
     line("Hello, {$name}!");
 
     for ($i = 1; $i <= CORRECT_ANSWER; $i += 1) {
@@ -64,4 +64,3 @@ function gameLogic($gameConditionsEven, $dataAttributes)
 
     return line("Congratulations, {$name}!");
 }
-
