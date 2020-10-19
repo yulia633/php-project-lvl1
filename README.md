@@ -10,5 +10,10 @@
 ### Установка
 Для глобальной установки выполните команду composer global require yulia633/hexlet-project-1
 ### Пример выполнения игры
-Запуск игры:
+Запуск игры Brain-even:
+
 [![asciicast](https://asciinema.org/a/9ksqmwOMm30I95G9e4gmqBjy4.svg)](https://asciinema.org/a/9ksqmwOMm30I95G9e4gmqBjy4)
+
+Запуск игры Brain-calc:
+
+[![asciicast](https://asciinema.org/a/Zs4nqQCYaoJGfoGeAaYpR3DA3.svg)](https://asciinema.org/a/Zs4nqQCYaoJGfoGeAaYpR3DA3)
