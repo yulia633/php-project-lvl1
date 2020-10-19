@@ -2,7 +2,8 @@
     "name": "yulia633/hexlet-project-1",
     "bin": [
          "bin/brain-games",
-         "bin/brain-even"
+         "bin/brain-even",
+         "bin/brain-calc"
     ],
     "description": "Brain games",
     "type": "project",
@@ -16,7 +17,9 @@
     "autoload": {
         "files": [
             "src/Cli.php",
-            "src/Even.php"
+            "src/Engine.php",
+            "src/Games/Even.php",
+            "src/Games/Calc.php"
         ]
     },
     "scripts": {
