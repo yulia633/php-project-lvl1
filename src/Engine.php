@@ -9,10 +9,10 @@ const CORRECT_ANSWER = 3;
 
 function gameLogic($gameConditionsEven, $generateGameData)
 {
-    line("Welcome to the Brain Games! \n");
-    line($gameConditionsEven);
+    line("Welcome to the Brain Games!");
     $name = prompt("May I have your name?");
     line("Hello, {$name}!");
+    line($gameConditionsEven);
 
     for ($i = 1; $i <= CORRECT_ANSWER; $i += 1) {
         [$question, $answer] = $generateGameData();
