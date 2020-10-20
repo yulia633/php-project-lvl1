@@ -17,3 +17,7 @@
 Запуск игры Brain-calc:
 
 [![asciicast](https://asciinema.org/a/Zs4nqQCYaoJGfoGeAaYpR3DA3.svg)](https://asciinema.org/a/Zs4nqQCYaoJGfoGeAaYpR3DA3)
+
+Запуск игры Brain-gcd:
+
+[![asciicast](https://asciinema.org/a/366527.svg)](https://asciinema.org/a/366527)
