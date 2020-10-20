@@ -21,3 +21,7 @@
 Запуск игры Brain-gcd:
 
 [![asciicast](https://asciinema.org/a/366527.svg)](https://asciinema.org/a/366527)
+
+Запуск игры Brain-progression:
+
+[![asciicast](https://asciinema.org/a/366545.svg)](https://asciinema.org/a/366545)
