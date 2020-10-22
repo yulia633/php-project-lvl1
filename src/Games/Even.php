@@ -12,7 +12,7 @@ const RANDOM_MAX = 100;
 
 function isEven($number)
 {
-    return $number % 2 === 0 ? true : false;
+    return $number % 2 === 0;
 }
 
 function getAnswer($question)
@@ -21,20 +21,14 @@ function getAnswer($question)
     return $answer;
 }
 
-function getRandomNumber()
-{
-    return rand(RANDOM_MIN, RANDOM_MAX);
-}
-
 function play()
 {
     $generateGameData = function () {
-        $question = getRandomNumber();
+        $question = rand(RANDOM_MIN, RANDOM_MAX);
         $answer = getAnswer($question);
 
         return [$question, $answer];
     };
 
     gameLogic(DESCRIPTION, $generateGameData);
-    return;
 }
