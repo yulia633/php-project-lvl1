@@ -20,26 +20,19 @@ function generateProgression($start, $step, $progressionLength)
     return $progression;
 }
 
-function getRandomNumber()
-{
-    return rand(RANDOM_MIN, RANDOM_MAX);
-}
-
 function play()
 {
     $generateGameData = function () {
-        $start = getRandomNumber();
-        $step = getRandomNumber();
+        $start = rand(RANDOM_MIN, RANDOM_MAX);
+        $step = rand(RANDOM_MIN, RANDOM_MAX);
         $progression = generateProgression($start, $step, PROGRESSION_LENGTH);
-        $progressionWithHiddenElement = array_slice($progression, 0);
         $hiddenElementIndex = rand(0, PROGRESSION_LENGTH - 1);
-        $progressionWithHiddenElement[$hiddenElementIndex] = '..';
-        $question = implode(' ', $progressionWithHiddenElement);
         $answer = $progression[$hiddenElementIndex];
+        $progression[$hiddenElementIndex] = '..';
+        $question = implode($progression, ' ');
 
         return [$question, "{$answer}"];
     };
 
     gameLogic(DESCRIPTION, $generateGameData);
-    return;
 }
