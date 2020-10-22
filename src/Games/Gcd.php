@@ -18,16 +18,11 @@ function gcd($a, $b)
     return gcd($b, $a % $b);
 }
 
-function getRandomNumber()
-{
-    return rand(RANDOM_MIN, RANDOM_MAX);
-}
-
 function play()
 {
     $generateGameData = function () {
-        $firstNumber = getRandomNumber();
-        $secondNumber = getRandomNumber();
+        $firstNumber = rand(RANDOM_MIN, RANDOM_MAX);
+        $secondNumber = rand(RANDOM_MIN, RANDOM_MAX);
         $question = "{$firstNumber} {$secondNumber}";
         $answer = (string)(gcd($firstNumber, $secondNumber));
 
@@ -35,5 +30,4 @@ function play()
     };
 
     gameLogic(DESCRIPTION, $generateGameData);
-    return;
 }
