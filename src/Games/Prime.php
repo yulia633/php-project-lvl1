@@ -15,34 +15,33 @@ function isPrime($number)
     if ($number < 2) {
         return false;
     }
-    for ($i = 2; $i <= $number / 2; $i += 1) {
-        if ($number % $i == 0) {
-            return false;
+
+    $iter = function ($divider) use ($number, &$iter) {
+        if ($divider ** 2 <= $number) {
+            if ($number % $divider === 0) {
+                    return false;
+            }
+            return $iter($divider + 1);
         }
-    }
-    return true;
+        
+        return true;
+    };
+    return $iter(2);
 }
 
 function getAnswer($question)
 {
-    $answer = isPrime($question) ? 'yes' : 'no';
-    return $answer;
-}
-
-function getRandomNumber()
-{
-    return rand(RANDOM_MIN, RANDOM_MAX);
+    return isPrime($question) ? 'yes' : 'no';
 }
 
 function play()
 {
     $generateGameData = function () {
-        $question = getRandomNumber();
+        $question = rand(RANDOM_MIN, RANDOM_MAX);
         $answer = getAnswer($question);
 
         return [$question, $answer];
     };
 
     gameLogic(DESCRIPTION, $generateGameData);
-    return;
 }
