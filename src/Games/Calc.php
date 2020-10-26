@@ -7,6 +7,7 @@ use function cli\line;
 use function cli\prompt;
 
 const DESCRIPTION = 'What is the result of the expression?';
+const RANDOM_MIN = 0;
 const RANDOM_MAX = 10;
 
 function calculate($firstNumber, $secondNumber, $sign)
@@ -19,15 +20,15 @@ function calculate($firstNumber, $secondNumber, $sign)
         case '*':
             return $firstNumber * $secondNumber;
         default:
-            throw new Exception('Not this is: {$sign}!');
+            throw new Exception('There is no such operator: {$sign}.');
     }
 }
 
 function play()
 {
     $generateGameData = function () {
-        $firstNumber = rand(0, RANDOM_MAX);
-        $secondNumber = rand(0, RANDOM_MAX);
+        $firstNumber = rand(RANDOM_MIN, RANDOM_MAX);
+        $secondNumber = rand(RANDOM_MIN, RANDOM_MAX);
         $mapSign = ['+', '-', '*'];
         $sign = $mapSign[array_rand($mapSign)];
         $question = "{$firstNumber}{$sign}{$secondNumber}";
