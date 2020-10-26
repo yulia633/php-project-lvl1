@@ -10,12 +10,12 @@ const DESCRIPTION = 'Answer "yes" if number even otherwise answer "no".';
 const RANDOM_MIN = 1;
 const RANDOM_MAX = 100;
 
-function isEven($number)
+function isEven(int $number)
 {
     return $number % 2 === 0;
 }
 
-function getAnswer($question)
+function getAnswer(int $question)
 {
     $answer = isEven($question) ? 'yes' : 'no';
     return $answer;

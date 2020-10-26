@@ -11,7 +11,7 @@ const PROGRESSION_LENGTH = 10;
 const RANDOM_MIN = 1;
 const RANDOM_MAX = 10;
 
-function generateProgression($start, $step, $progressionLength)
+function generateProgression(int $start, int $step, int $progressionLength)
 {
     $progression = [];
     for ($i = 0; $i < $progressionLength; $i += 1) {

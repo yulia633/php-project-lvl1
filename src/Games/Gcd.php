@@ -10,7 +10,7 @@ const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
 const RANDOM_MIN = 1;
 const RANDOM_MAX = 20;
 
-function gcd($a, $b)
+function gcd(int $a, int $b)
 {
     if ($b === 0) {
         return abs($a);

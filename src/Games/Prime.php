@@ -10,7 +10,7 @@ const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no
 const RANDOM_MIN = 2;
 const RANDOM_MAX = 20;
 
-function isPrime($number)
+function isPrime(int $number)
 {
     if ($number < 2) {
         return false;
@@ -29,7 +29,7 @@ function isPrime($number)
     return $iter(2);
 }
 
-function getAnswer($question)
+function getAnswer(int $question)
 {
     return isPrime($question) ? 'yes' : 'no';
 }
