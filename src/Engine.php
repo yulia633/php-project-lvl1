@@ -23,6 +23,7 @@ function runGame($description, $generateGameData)
         if ($playerAnswer !== $answer) {
             line("'{$playerAnswer}' is wrong answer ;(. Correct answer was '{$answer}'");
             line("Let`s try again, {$name}!");
+            return;
         }
 
         line("Correct!");
