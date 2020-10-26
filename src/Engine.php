@@ -14,25 +14,19 @@ function runGame($description, $generateGameData)
     line("Hello, {$name}!");
     line($description);
 
-    $playerAnswerCorrect = true;
-
     for ($correctAnswersCount = 1; $correctAnswersCount <= ROUND_COUNT; $correctAnswersCount += 1) {
         [$question, $answer] = $generateGameData();
-
+        
         line("Question: {$question}");
         $playerAnswer = prompt("Your answer");
-        $playerAnswerCorrect = $playerAnswer === $answer;
 
-        $playerAnswerCorrect ?
-        line("Correct!") :
-        line("'{$playerAnswer}' is wrong answer ;(. Correct answer was '{$answer}'");
-        
-        if (!$playerAnswerCorrect) {
-            break;
+        if ($playerAnswer !== $answer) {
+            line("'{$playerAnswer}' is wrong answer ;(. Correct answer was '{$answer}'");
+            line("Let`s try again, {$name}!");
         }
-    }
 
-    $playerAnswerCorrect ?
-        line("Congratulations, {$name}!") :
-        line("Let`s try again, {$name}!");
+        line("Correct!");
+    }
+        
+    line("Congratulations, {$name}!");
 }
