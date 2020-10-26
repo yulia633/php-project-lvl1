@@ -5,16 +5,16 @@ namespace BrainGames\Engine;
 use function cli\line;
 use function cli\prompt;
 
-const ROUND = 3;
+const ROUND_COUNT = 3;
 
-function gameLogic($description, $generateGameData)
+function runGame($description, $generateGameData)
 {
     line("Welcome to the Brain Games!");
     $name = prompt("May I have your name?");
     line("Hello, {$name}!");
     line($description);
 
-    for ($i = 1; $i <= ROUND; $i += 1) {
+    for ($i = 1; $i <= ROUND_COUNT; $i += 1) {
         [$question, $answer] = $generateGameData();
 
         line("Question: {$question}");

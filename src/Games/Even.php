@@ -2,7 +2,7 @@
 
 namespace BrainGames\Games\Even;
 
-use function BrainGames\Engine\gameLogic;
+use function BrainGames\Engine\runGame;
 use function cli\line;
 use function cli\prompt;
 
@@ -30,5 +30,5 @@ function play()
         return [$question, $answer];
     };
 
-    gameLogic(DESCRIPTION, $generateGameData);
+    runGame(DESCRIPTION, $generateGameData);
 }
