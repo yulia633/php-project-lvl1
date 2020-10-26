@@ -1,8 +1,8 @@
 <?php
 
-namespace Brain\Games\Prime;
+namespace BrainGames\Games\Prime;
 
-use function Brain\Engine\gameLogic;
+use function BrainGames\Engine\gameLogic;
 use function cli\line;
 use function cli\prompt;
 

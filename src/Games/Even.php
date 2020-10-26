@@ -1,8 +1,8 @@
 <?php
 
-namespace Brain\Games\Even;
+namespace BrainGames\Games\Even;
 
-use function Brain\Engine\gameLogic;
+use function BrainGames\Engine\gameLogic;
 use function cli\line;
 use function cli\prompt;
 
