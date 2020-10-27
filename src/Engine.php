@@ -14,6 +14,10 @@ function runGame(string $description, object $generateGameData)
     line("Hello, {$name}!");
     line($description);
 
+    if (empty(ROUND_COUNT)) {
+        return null;
+    }
+    
     for ($correctAnswersCount = 1; $correctAnswersCount <= ROUND_COUNT; $correctAnswersCount += 1) {
         [$question, $answer] = $generateGameData();
         
