@@ -7,16 +7,12 @@ use function cli\prompt;
 
 const ROUND_COUNT = 3;
 
-function runGame(string $description, object $generateGameData)
+function runGame(string $description, callable $generateGameData)
 {
     line("Welcome to the Brain Games!");
     $name = prompt("May I have your name?");
     line("Hello, {$name}!");
     line($description);
-
-    if (empty($generateGameData)) {
-        return null;
-    }
     
     for ($correctAnswersCount = 1; $correctAnswersCount <= ROUND_COUNT; $correctAnswersCount += 1) {
         [$question, $answer] = $generateGameData();
