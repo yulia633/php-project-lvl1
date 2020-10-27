@@ -14,7 +14,7 @@ function runGame(string $description, object $generateGameData)
     line("Hello, {$name}!");
     line($description);
 
-    if (empty(ROUND_COUNT)) {
+    if (empty($generateGameData)) {
         return null;
     }
     
